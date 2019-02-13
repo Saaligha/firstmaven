@@ -13,6 +13,7 @@ import java.util.GregorianCalendar;
  *
  * @author logday
  */
+//Adding a comment, technically making a change! :D
 public class Gui extends javax.swing.JFrame {
     private Object dateFormat;
 
