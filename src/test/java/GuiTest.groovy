@@ -1,4 +1,4 @@
-class GuiTest extends GroovyTestCase {
+class GuiTest extends GroovyTestCase{
     void testMain() {
         println "hi"
     }
