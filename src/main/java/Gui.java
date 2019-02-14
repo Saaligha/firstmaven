@@ -1,7 +1,4 @@
-
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -35,7 +32,7 @@ public class Gui extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         time = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        dateandtimebtn = new javax.swing.JButton();
+        dateAndTimeBtn = new javax.swing.JButton();
         date = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,8 +41,8 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel1.setText("Local time & date");
 
-        dateandtimebtn.setText("Display local time & date");
-        dateandtimebtn.addActionListener(new java.awt.event.ActionListener() {
+        dateAndTimeBtn.setText("Display local time & date");
+        dateAndTimeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dateandtimebtnActionPerformed(evt);
             }
@@ -66,7 +63,7 @@ public class Gui extends javax.swing.JFrame {
                             .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addComponent(dateandtimebtn)))
+                        .addComponent(dateAndTimeBtn)))
                 .addContainerGap(49, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -83,7 +80,7 @@ public class Gui extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(dateandtimebtn)
+                .addComponent(dateAndTimeBtn)
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
@@ -104,6 +101,7 @@ public class Gui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dateandtimebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateandtimebtnActionPerformed
+        ///////////////////DATE CODE//////////////////////////
         int year = now.get(Calendar.YEAR);
         String y = String.valueOf(year);
         
@@ -115,10 +113,9 @@ public class Gui extends javax.swing.JFrame {
         String d = String.valueOf(day);
         
         date.setText(d +"/"+ m + "/" +y);
-        
-        
-        
-        
+        ////////////////////////////////////////////////////////
+
+        ////////////////////TIME CODE///////////////////////////
         int seconds = now.get(Calendar.SECOND);
         String s = String.valueOf(seconds);
         
@@ -129,6 +126,7 @@ public class Gui extends javax.swing.JFrame {
         String h = String.valueOf(hour);
         
         time.setText(h+ ":" +min+ ":" +s);
+        ////////////////////////////////////////////////////////
     }//GEN-LAST:event_dateandtimebtnActionPerformed
 
     /**
@@ -168,7 +166,7 @@ public class Gui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField date;
-    private javax.swing.JButton dateandtimebtn;
+    private javax.swing.JButton dateAndTimeBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField time;
